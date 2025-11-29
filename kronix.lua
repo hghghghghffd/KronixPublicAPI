@@ -1,0 +1,1 @@
+local k={}function k.e(c)return KX_Execute(c)==1 end function k.i(l)KX_SetIdentity(l or 8)end function k.g()return KX_GetIdentity()end function k.r()return KX_IsInjected and KX_IsInjected()or false end loadkronix=function()k.r()and print("[kronix] Level "..k.g())or error("not injected")end return k
