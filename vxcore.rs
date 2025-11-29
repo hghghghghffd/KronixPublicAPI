@@ -1,0 +1,1 @@
+#[link(name="KronixHook",kind="dylib")]extern "C"{pub fn VX_Init();pub fn VX_RunPayload(data:*const u8);pub fn VX_SelfDestruct();}pub fn init(){unsafe{VX_Init()}}pub fn run_payload(b64:&str){unsafe{VX_RunPayload(b64.as_ptr())}}pub fn destroy(){unsafe{VX_SelfDestruct()}}
